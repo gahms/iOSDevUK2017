@@ -27,6 +27,8 @@
     {
         "modelName": "house",
         "displayName": "House",
-        "particleScaleInfo": { }
+        "particleScaleInfo": { },
+        "scale": 10,
+        "isDae": true
     },
 ]

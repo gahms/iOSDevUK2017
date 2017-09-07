@@ -13,13 +13,18 @@ struct VirtualObjectDefinition: Codable, Equatable {
     let modelName: String
     let displayName: String
     let particleScaleInfo: [String: Float]
+    let scale: Float?
+    let isDae: Bool?
     
     lazy var thumbImage: UIImage = UIImage(named: self.modelName)!
     
-    init(modelName: String, displayName: String, particleScaleInfo: [String: Float] = [:]) {
+    init(modelName: String, displayName: String, particleScaleInfo: [String: Float] = [:],
+         scale: Float?, isDae: Bool?) {
         self.modelName = modelName
         self.displayName = displayName
         self.particleScaleInfo = particleScaleInfo
+        self.scale = scale
+        self.isDae = isDae
     }
     
     static func ==(lhs: VirtualObjectDefinition, rhs: VirtualObjectDefinition) -> Bool {
@@ -37,7 +42,17 @@ class VirtualObject: SCNReferenceNode, ReactsToScale {
         guard let url = Bundle.main.url(forResource: "Models.scnassets/\(definition.modelName)/\(definition.modelName)", withExtension: "scn")
             else { fatalError("can't find expected virtual object bundle resources") }
         super.init(url: url)!
-        self.scale = SCNVector3(0.001, 0.001, 0.001)
+        
+        var scaleFix: Float = 1
+        if let isDae = definition.isDae {
+            if isDae {
+                scaleFix = 39.370
+            }
+        }
+        if let scale = definition.scale {
+            let invScale = 1/scale/scaleFix
+            self.scale = SCNVector3(invScale, invScale, invScale)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
