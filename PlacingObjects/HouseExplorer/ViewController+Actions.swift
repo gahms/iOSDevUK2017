@@ -62,7 +62,7 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             return
         }
         
-        let wall = object.childNode(withName: "ID6712", recursively: true)!
+        let wall = object.childNode(withName: "ID6897", recursively: true)!
         let m = wall.geometry!.firstMaterial!
         print(m)
         /*
