@@ -13,6 +13,7 @@
 		B1865A5A1F617A2200CFD79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1865A581F617A2200CFD79A /* Main.storyboard */; };
 		B1865A5C1F617A2200CFD79A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1865A5B1F617A2200CFD79A /* Assets.xcassets */; };
 		B1865A5F1F617A2200CFD79A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1865A5D1F617A2200CFD79A /* LaunchScreen.storyboard */; };
+		B1865A691F618B0F00CFD79A /* House.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B1865A681F618B0F00CFD79A /* House.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B1865A5B1F617A2200CFD79A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1865A5E1F617A2200CFD79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1865A601F617A2200CFD79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1865A681F618B0F00CFD79A /* House.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = House.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				B1865A521F617A2200CFD79A /* AppDelegate.swift */,
 				B1865A541F617A2200CFD79A /* art.scnassets */,
+				B1865A681F618B0F00CFD79A /* House.scnassets */,
 				B1865A561F617A2200CFD79A /* ViewController.swift */,
 				B1865A581F617A2200CFD79A /* Main.storyboard */,
 				B1865A5B1F617A2200CFD79A /* Assets.xcassets */,
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1865A551F617A2200CFD79A /* art.scnassets in Resources */,
+				B1865A691F618B0F00CFD79A /* House.scnassets in Resources */,
 				B1865A5F1F617A2200CFD79A /* LaunchScreen.storyboard in Resources */,
 				B1865A5C1F617A2200CFD79A /* Assets.xcassets in Resources */,
 				B1865A5A1F617A2200CFD79A /* Main.storyboard in Resources */,

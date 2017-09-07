@@ -22,11 +22,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
+        loadScene()
+    }
+    
+    private func loadScene() {
+        let sceneName = "House.scnassets/Svends House.dae"
+        //let sceneNameOrg = "art.scnassets/ship.scn"
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
+        //let url = Bundle.main.url(forResource: sceneName, withExtension: "scn")!
+        //let sceneSource = SCNSceneSource(url: url, options: nil)
+
+        let scene = SCNScene(named: sceneName)!
         sceneView.scene = scene
     }
     
