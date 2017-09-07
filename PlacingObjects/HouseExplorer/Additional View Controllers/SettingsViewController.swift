@@ -10,6 +10,7 @@ import UIKit
 enum Setting: String {
     case scaleWithPinchGesture
     case dragOnInfinitePlanes
+    case cameraLight
     
     static func registerDefaults() {
         UserDefaults.standard.register(defaults: [
@@ -33,6 +34,7 @@ class SettingsViewController: UITableViewController {
     
 	@IBOutlet weak var scaleWithPinchGestureSwitch: UISwitch!
 	@IBOutlet weak var dragOnInfinitePlanesSwitch: UISwitch!
+    @IBOutlet weak var cameraLightSwitch: UISwitch!
     
     // MARK: - View Life Cycle
     
@@ -47,6 +49,7 @@ class SettingsViewController: UITableViewController {
         let defaults = UserDefaults.standard
         scaleWithPinchGestureSwitch.isOn = defaults.bool(for: .scaleWithPinchGesture)
         dragOnInfinitePlanesSwitch.isOn = defaults.bool(for: .dragOnInfinitePlanes)
+        cameraLightSwitch.isOn = defaults.bool(for: .cameraLight)
     }
     
     override func viewWillLayoutSubviews() {
@@ -57,13 +60,16 @@ class SettingsViewController: UITableViewController {
     
 	@IBAction func didChangeSetting(_ sender: UISwitch) {
 		let defaults = UserDefaults.standard
-		switch sender {
-            case scaleWithPinchGestureSwitch:
-                defaults.set(sender.isOn, for: .scaleWithPinchGesture)
-            case dragOnInfinitePlanesSwitch:
-                defaults.set(sender.isOn, for: .dragOnInfinitePlanes)
-            default: break
-		}
-	}
+        switch sender {
+        case scaleWithPinchGestureSwitch:
+            defaults.set(sender.isOn, for: .scaleWithPinchGesture)
+        case dragOnInfinitePlanesSwitch:
+            defaults.set(sender.isOn, for: .dragOnInfinitePlanes)
+        case cameraLightSwitch:
+            defaults.set(sender.isOn, for: .cameraLight)
+        default:
+            break
+        }
+    }
     
 }
