@@ -1,15 +1,5 @@
 [
     {
-        "modelName": "cup.scn",
-        "displayName": "Cup",
-        "particleScaleInfo": { }
-    },
-    {
-        "modelName": "vase.scn",
-        "displayName": "Vase",
-        "particleScaleInfo": { }
-    },
-    {
         "modelName": "house.dae",
         "displayName": "House 1:50",
         "particleScaleInfo": { },
