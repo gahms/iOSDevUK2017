@@ -37,6 +37,7 @@ class VirtualObject: SCNReferenceNode, ReactsToScale {
         guard let url = Bundle.main.url(forResource: "Models.scnassets/\(definition.modelName)/\(definition.modelName)", withExtension: "scn")
             else { fatalError("can't find expected virtual object bundle resources") }
         super.init(url: url)!
+        self.scale = SCNVector3(0.001, 0.001, 0.001)
     }
     
     required init?(coder aDecoder: NSCoder) {
