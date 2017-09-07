@@ -25,6 +25,11 @@ extension ARSCNView {
 			camera.exposureOffset = -1
 			camera.minimumExposure = -1
 			camera.maximumExposure = 3
+            
+            let light = SCNLight()
+            light.type = .omni
+            light.castsShadow = true
+            pointOfView?.light = light
 		}
 	}
 }
