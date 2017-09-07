@@ -14,7 +14,7 @@ struct VirtualObjectDefinition: Codable, Equatable {
     let displayName: String
     let particleScaleInfo: [String: Float]
     let scale: Float?
-    let isDae: Bool?
+    let isSketchUp: Bool?
     
     lazy var thumbImage: UIImage = UIImage(named: self.modelName)!
     
@@ -24,7 +24,7 @@ struct VirtualObjectDefinition: Codable, Equatable {
         self.displayName = displayName
         self.particleScaleInfo = particleScaleInfo
         self.scale = scale
-        self.isDae = isDae
+        self.isSketchUp = isDae
     }
     
     static func ==(lhs: VirtualObjectDefinition, rhs: VirtualObjectDefinition) -> Bool {
@@ -44,8 +44,8 @@ class VirtualObject: SCNReferenceNode, ReactsToScale {
         super.init(url: url)!
         
         var scaleFix: Float = 1
-        if let isDae = definition.isDae {
-            if isDae {
+        if let isSketchUp = definition.isSketchUp {
+            if isSketchUp {
                 // Apparently SketchUp has an error in its DAE export
                 // ref: https://forums.sketchup.com/t/dae-importing-wrong-scale/8991/8
                 scaleFix = 39.370

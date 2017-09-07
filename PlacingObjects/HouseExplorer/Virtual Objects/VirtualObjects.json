@@ -29,6 +29,6 @@
         "displayName": "House",
         "particleScaleInfo": { },
         "scale": 10,
-        "isDae": true
+        "isSketchUp": true
     },
 ]
