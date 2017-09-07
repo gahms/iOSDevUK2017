@@ -57,6 +57,32 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
         }
     }
     
+    @IBAction func changeWall(_ button: UIButton) {
+        guard let object = virtualObjectManager.lastUsedObject else {
+            return
+        }
+        
+        let wall = object.childNode(withName: "ID6712", recursively: true)!
+        let m = wall.geometry!.firstMaterial!
+        print(m)
+        /*
+         <SCNMaterial: 0x1c43c1590 '_127_Britain_rustic_bricks_texture-seamless4'
+         diffuse=<SCNMaterialProperty: 0x1c06c8810 | contents=file:///private/var/containers/Bundle/Application/FA340FE4-3AC7-47A9-889C-D573CE8257D0/HouseExplorer.app/Models.scnassets/house/Svends%20House/_127_Britain_rustic_bricks_texture-seamless4.jpg>
+         ambient=<SCNMaterialProperty: 0x1c06c8880 | contents=UIExtendedSRGBColorSpace 0.484529 0.484529 0.484529 1>
+         specular=<SCNMaterialProperty: 0x1c06c87a0 | contents=UIExtendedSRGBColorSpace 0 0 0 1>
+         emission=<SCNMaterialProperty: 0x1c44cff80 | contents=UIExtendedSRGBColorSpace 0 0 0 1>
+         transparent=<SCNMaterialProperty: 0x1c06c8730 | contents=UIExtendedSRGBColorSpace 1 1 1 1>
+         reflective=<SCNMaterialProperty: 0x1c06c86c0 | contents=UIExtendedSRGBColorSpace 0 0 0 1>
+         multiply=<SCNMaterialProperty: 0x1c06c8650 | contents=UIExtendedSRGBColorSpace 1 1 1 1>
+         normal=<SCNMaterialProperty: 0x1c06c85e0 | contents=UIExtendedSRGBColorSpace 1 1 1 1>
+         >
+         */
+     
+        let url = Bundle.main.url(forResource: "Models.scnassets/house/Svends House/_104_white_metal_facade_cladding_texture-seamless", withExtension: "jpg")
+        //let mp = SCNMaterialProperty(contents: url)
+        m.diffuse.contents = url
+    }
+    
     // MARK: - UIPopoverPresentationControllerDelegate
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
