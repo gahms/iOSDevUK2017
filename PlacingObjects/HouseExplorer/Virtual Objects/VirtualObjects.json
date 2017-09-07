@@ -1,34 +1,47 @@
 [
     {
-        "modelName": "candle",
-        "displayName": "Candle",
-        "particleScaleInfo": {"flame": 0.018 }
-    },
-    {
-        "modelName": "cup",
+        "modelName": "cup.scn",
         "displayName": "Cup",
         "particleScaleInfo": { }
     },
     {
-        "modelName": "vase",
+        "modelName": "vase.scn",
         "displayName": "Vase",
         "particleScaleInfo": { }
     },
     {
-        "modelName": "lamp",
-        "displayName": "Lamp",
-        "particleScaleInfo": { }
+        "modelName": "house.dae",
+        "displayName": "House 1:50",
+        "particleScaleInfo": { },
+        "scale": 50,
+        "isSketchUp": true
     },
     {
-        "modelName": "chair",
-        "displayName": "Chair",
-        "particleScaleInfo": { }
+        "modelName": "house.dae",
+        "displayName": "House 1:20",
+        "particleScaleInfo": { },
+        "scale": 20,
+        "isSketchUp": true
     },
     {
-        "modelName": "house",
-        "displayName": "House",
+        "modelName": "house.dae",
+        "displayName": "House 1:10",
         "particleScaleInfo": { },
         "scale": 10,
+        "isSketchUp": true
+    },
+    {
+        "modelName": "house.dae",
+        "displayName": "House 1:2",
+        "particleScaleInfo": { },
+        "scale": 2,
+        "isSketchUp": true
+    },
+    {
+        "modelName": "house.dae",
+        "displayName": "House 1:1",
+        "particleScaleInfo": { },
+        "scale": 1,
         "isSketchUp": true
     },
 ]
